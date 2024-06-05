@@ -8,6 +8,12 @@ class MenuList(generic.ListView):
      template_name = "index.html"
 
 
+     def get_context_data(self):
+         context = {"meals": ["Pizza", "Pasta"],
+                    "ingredients": ["things"]}
+         return context
+
+
 class MenuItemDetail(generic.DetailView):
         model = Item
         template_name = "menu_teim_detail.html"
